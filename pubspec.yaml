@@ -14,10 +14,13 @@ dependencies:
   flutter_bloc: ^8.1.1
   flutter_localizations:
     sdk: flutter
+  go_router: ^5.0.2
+  go_router_builder: ^1.0.16
   intl: ^0.17.0
 
 dev_dependencies:
   bloc_test: ^9.1.0
+  build_runner: ^2.2.1
   flutter_test:
     sdk: flutter
   mocktail: ^0.3.0

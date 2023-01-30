@@ -19,7 +19,7 @@ class RoundedButtonWidget extends StatelessWidget {
       child: SizedBox(
         child: ElevatedButton(
           style: ButtonStyle(
-            backgroundColor: MaterialStateProperty.all(AppColor.buttonColor),
+            backgroundColor: MaterialStateProperty.all(AppColor.kPrimaryColor),
             padding: MaterialStateProperty.all(EdgeInsets.zero),
             shape: MaterialStateProperty.all(
               RoundedRectangleBorder(
