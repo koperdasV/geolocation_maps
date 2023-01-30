@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:geolocation_maps/counter/counter.dart';
 import 'package:geolocation_maps/l10n/l10n.dart';
+import 'package:geolocation_maps/src/ui/auth/auth_screen.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -16,7 +16,7 @@ class App extends StatelessWidget {
       ),
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
-      home: const CounterPage(),
+      home: const AuthScreen(),
     );
   }
 }
