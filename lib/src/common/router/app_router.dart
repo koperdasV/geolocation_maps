@@ -63,8 +63,6 @@ mixin AppRouterController on State<AppRouter> implements IAppRouterController {
   @override
   void initState() {
     super.initState();
-    //final repositoryStore = RepositoryScope.of(context);
-    // final authController = AuthenticationScope.of(context);
     router = GoRouter(
       restorationScopeId: 'go_router',
       initialLocation: const HomeRoute().location,

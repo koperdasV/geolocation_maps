@@ -1,13 +1,11 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:geolocation_maps/l10n/l10n.dart';
 import 'package:geolocation_maps/src/common/router/app_router.dart';
+import 'package:geolocation_maps/theme/app_theme.dart';
 import 'package:meta/meta.dart' show internal;
 
 /// {@template material_context.material_context}
-/// CupertinoContext widget
 /// {@endtemplate}
 class CoreApp extends StatefulWidget {
   /// {@macro material_context.material_context}
@@ -23,21 +21,20 @@ class CoreApp extends StatefulWidget {
 
   @override
   State<CoreApp> createState() => _CoreAppState();
-} // CupertinoContext
+}
 
-const systemUiOverlayStyle = SystemUiOverlayStyle(
-  statusBarColor: Colors.transparent, // status bar color
-  statusBarBrightness: Brightness.light, //status bar brigtness
-  statusBarIconBrightness: Brightness.dark, //status barIcon Brightness
-);
-/// State for widget CupertinoContext
+// const systemUiOverlayStyle = SystemUiOverlayStyle(
+//   statusBarColor: Colors.transparent, // status bar color
+//   statusBarBrightness: Brightness.light, //status bar brigtness
+//   statusBarIconBrightness: Brightness.dark, //status barIcon Brightness
+// );
 class _CoreAppState extends State<CoreApp> {
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setSystemUIOverlayStyle(systemUiOverlayStyle);
+    //SystemChrome.setSystemUIOverlayStyle(systemUiOverlayStyle);
     final routerController = AppRouter.of(context);
-    return CupertinoApp.router(
-      //theme: buildThemeData(),
+    return MaterialApp.router(
+      theme: buildThemeData(),
       title: 'Packages',
       restorationScopeId: 'app',
       routeInformationParser: routerController.router.routeInformationParser,
@@ -54,4 +51,4 @@ class _CoreAppState extends State<CoreApp> {
       locale: const Locale('en', 'US'),
     );
   }
-} // _CupertinoContextState
+}
