@@ -5,9 +5,8 @@ import 'package:geolocation_maps/src/ui/home/home_page.dart';
 import 'package:geolocation_maps/src/ui/profile/profile_page.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key, required this.title});
+  const HomeScreen({super.key});
 
-  final String title;
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -30,8 +29,6 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
-        centerTitle: true,
       ),
       drawer: Drawer(
         child: ListView(
