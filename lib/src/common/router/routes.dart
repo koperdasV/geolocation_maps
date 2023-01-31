@@ -14,11 +14,10 @@ class HomeRoute extends GoRouteData {
 
   @override
   Widget build(BuildContext context) {
-    return const HomeScreen(
-      title: 'Home',
-    );
+    return const HomeScreen();
   }
 }
+
 /// RegistrationRoute
 @TypedGoRoute<RegistrationRoute>(path: '/registration')
 class RegistrationRoute extends GoRouteData {

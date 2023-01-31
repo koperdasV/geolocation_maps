@@ -5,9 +5,8 @@ import 'package:geolocation_maps/src/ui/home/home_page.dart';
 import 'package:geolocation_maps/src/ui/profile/profile_page.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key, required this.title});
+  const HomeScreen({super.key});
 
-  final String title;
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -30,17 +29,30 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
-        centerTitle: true,
       ),
       drawer: Drawer(
         child: ListView(
           children: [
-            const DrawerHeader(
+            DrawerHeader(
               padding: EdgeInsets.zero,
               child: UserAccountsDrawerHeader(
-                accountName: Text('Name User'),
-                accountEmail: Text('Email User'),
+                decoration: BoxDecoration(
+                  color: AppColor.kPrimaryColor,
+                ),
+                currentAccountPicture: const CircleAvatar(),
+                currentAccountPictureSize: const Size.square(60),
+                accountName: const Text(
+                  'Vasiliy Koperdas',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+                accountEmail: Text(
+                  'koperdasb@gmail.com',
+                  style: TextStyle(
+                    color: AppColor.emailColor,
+                  ),
+                ),
               ),
             ),
             ListTile(
