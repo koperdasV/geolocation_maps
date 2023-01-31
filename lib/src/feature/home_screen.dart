@@ -36,11 +36,26 @@ class _HomeScreenState extends State<HomeScreen> {
       drawer: Drawer(
         child: ListView(
           children: [
-            const DrawerHeader(
+            DrawerHeader(
               padding: EdgeInsets.zero,
               child: UserAccountsDrawerHeader(
-                accountName: Text('Name User'),
-                accountEmail: Text('Email User'),
+                decoration: BoxDecoration(
+                  color: AppColor.kPrimaryColor,
+                ),
+                currentAccountPicture: const CircleAvatar(),
+                currentAccountPictureSize: const Size.square(60),
+                accountName: const Text(
+                  'Vasiliy Koperdas',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+                accountEmail: Text(
+                  'koperdasb@gmail.com',
+                  style: TextStyle(
+                    color: AppColor.emailColor,
+                  ),
+                ),
               ),
             ),
             ListTile(
