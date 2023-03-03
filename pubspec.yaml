@@ -15,7 +15,7 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   go_router: ^5.0.2
-  go_router_builder: ^1.0.16
+  go_router_builder: ^1.1.4
   intl: ^0.17.0
 
 dev_dependencies:
